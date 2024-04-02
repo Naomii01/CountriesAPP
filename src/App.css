@@ -1,0 +1,9 @@
+.country-card-wrapper{
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+img{
+  max-width: 150px;
+  margin: 2px;
+}
