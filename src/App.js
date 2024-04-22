@@ -1,31 +1,17 @@
-import CountryCard from "./Components/CountryCard";
-import './App.css';
-import Header from "./Components/Header";
-import { useEffect } from "react";
-import { getAllCountries } from "./Services";
-import Nav from "./Components/Nav";
+import CountryDetail from "./Pages/CountryDetail";
+import Home from "./Pages/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  useEffect(() => {
-    getAllCountries().then(countries => {
-      console.log("countries: ", countries);
-    });
-  }, []);
-
   return (
     <div className="App">
-      <div className="bg"></div>
-       <Nav/>
-      
-       <Header/>
-      <div className='country-card-wrapper'>
-        <CountryCard 
-          name={'Rwanda'}
-          capital={'Kigali'}
-          population={12000000}
-          flagUrl={'https://upload.wikimedia.org/wikipedia/commons/1/17/Flag_of_Rwanda.svg'}
-        />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='/countries/:countryCode' element={<CountryDetail/>} />
+          <Route path='*' element={<h2>404 Page not found</h2>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

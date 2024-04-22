@@ -1,0 +1,60 @@
+.country-card-wrapper{
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  img{
+    max-width: 150px;
+    margin: 2px;
+  }
+  
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Adjust this percentage to control the size of the background */
+    height: 100%;
+    background-image: url('../images/world.jpg');
+    background-size: cover;
+    z-index: -1;
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+   }
+   
+   .pagination button {
+    margin: 0 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+   }
+   
+   .pagination button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+   }
+   .pagination-container {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+   }
+   
+   .pagination-item {
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+   }
+   
+   .pagination-item.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+   }
+   
+   .pagination-item.selected {
+    font-weight: bold;
+   }
+   

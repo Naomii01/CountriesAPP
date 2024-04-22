@@ -7,3 +7,14 @@ img{
   max-width: 150px;
   margin: 2px;
 }
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Adjust this percentage to control the size of the background */
+  height: 100%;
+  background-image: url('./images/world.jpg');
+  background-size: cover;
+  z-index: -1;
+}
